@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+transformers
+torch
+feedparser
+sqlite3-binary
