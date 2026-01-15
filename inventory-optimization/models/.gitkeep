@@ -1,0 +1,51 @@
+# Inventory Optimization System - Models Directory
+
+This directory contains trained models and analysis results for the Inventory Optimization System.
+
+## Contents
+
+- `demand_forecasting_models.pkl` - Trained demand forecasting models
+- `inventory_optimization_results.pkl` - Optimized inventory parameters for all products
+- `abc_analysis_results.pkl` - ABC analysis classification results
+- `training_summary.json` - Summary of model training process and performance
+
+## Model Types
+
+### Demand Forecasting Models
+- Moving Average (7-day window)
+- Exponential Smoothing
+- Historical Statistics (mean, standard deviation)
+
+### Inventory Optimization Models
+- Economic Order Quantity (EOQ)
+- Safety Stock Calculation
+- Reorder Point (ROP) Optimization
+- Service Level Analysis
+
+### ABC Analysis
+- Product classification based on value and usage
+- Portfolio analysis and categorization
+- Performance metrics by category
+
+## Usage
+
+```python
+import joblib
+
+# Load demand forecasting models
+models = joblib.load('demand_forecasting_models.pkl')
+
+# Load optimization results
+optimization = joblib.load('inventory_optimization_results.pkl')
+
+# Load ABC analysis
+abc_analysis = joblib.load('abc_analysis_results.pkl')
+```
+
+## Training
+
+To retrain the models, run:
+```bash
+cd notebooks
+python train_inventory_models.py
+```
